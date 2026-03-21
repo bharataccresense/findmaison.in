@@ -452,7 +452,6 @@ html
 
 @media (max-width: 48rem) {
 
-  /* Header */
   .header {
     flex-direction: column;
     height: auto;
@@ -470,13 +469,12 @@ html
     font-size: 1rem;
   }
 
-  /* Hero Text */
+ 
   .tagline h1 {
     font-size: 1.5rem;
     width: 90%;
   }
 
-  /* Carousel height fix */
   .hero-div {
     height: 20rem;
   }
@@ -485,7 +483,6 @@ html
     height: 20rem;
   }
 
-  /* About Section */
   .about-flex {
     flex-direction: column;
     text-align: center;
@@ -495,17 +492,14 @@ html
     max-width: 100%;
   }
 
-  /* Projects */
   .project-container {
     grid-template-columns: 1fr;
   }
 
-  /* Contact */
   .contact-container {
     flex-direction: column;
   }
 
-  /* Location */
   .location-container {
     flex-direction: column;
   }
@@ -514,7 +508,6 @@ html
     text-align: center;
   }
 
-  /* Brand */
   .brand-container {
     flex-direction: column;
     text-align: center;
