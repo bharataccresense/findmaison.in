@@ -1,10 +1,25 @@
-let index = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll(".slide");
+const bars = document.querySelectorAll(".progress");
 
-function showSlide() {
-  slides.forEach(s => s.classList.remove('active'));
-  slides[index].classList.add('active');
-  index = (index + 1) % slides.length;
+let current = 0;
+const duration = 4000;
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove("active"));
+  bars.forEach(b => {
+    b.classList.remove("active");
+    b.querySelector("::before");
+  });
+
+  slides[index].classList.add("active");
+  bars[index].classList.add("active");
 }
 
-setInterval(showSlide, 3000);
+function nextSlide() {
+  current++;
+  if (current >= slides.length) current = 0;
+  showSlide(current);
+}
+
+showSlide(current);
+setInterval(nextSlide, duration);

@@ -50,7 +50,8 @@
 .hero-div
 {
     /* border:.1rem solid black; */
-    height:100%;
+    height:auto;
+
 }
 
 .carousel {
@@ -73,4 +74,42 @@
 }
 .slide.active {
   opacity:1;
+}
+
+.progress-bars {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+
+/* Background line */
+.progress {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.4);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Filling line */
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: white;
+}
+
+/* Active animation */
+.progress.active::before {
+  animation: fill 3s linear forwards;
+}
+
+@keyframes fill {
+  from { width: 0%; }
+  to { width: 100%; }
 }
