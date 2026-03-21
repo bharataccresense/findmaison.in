@@ -90,6 +90,7 @@ html
 
 .slide.active {
     opacity: 1;
+    z-index: 2;
 }
 
 .progress-bars {
@@ -119,7 +120,7 @@ html
 }
 
 .progress.active::before {
-    animation: fill 4s linear forwards;
+    animation: fill var(--duration, 4s) linear forwards;
 }
 
 @keyframes fill {
@@ -301,15 +302,18 @@ html
 
 .location-container {
     max-width: 75rem;
-    margin: auto;
+    /* margin: auto; */
+    /* border:.1rem solid black; */
     display: flex;
-    gap: 2.5rem;
+    justify-content: center;
+    gap: 4rem;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .location-info {
-    flex: 1;
+    
+    /* border:.1rem solid black; */
     text-align: left;
 }
 
@@ -329,9 +333,9 @@ html
     text-decoration:underline;
 }
 
-.location-map {
+/* .location-map {
     flex: 1;
-}
+} */
 
 /* .location-map iframe {
     border-radius: 0.625rem;
@@ -346,6 +350,7 @@ html
     /* border:.1rem solid black; */
     max-width: 75rem;
     margin: auto;
+    flex-direction: column-reverse;
     display: flex;
     align-items: center;
     gap: 2.5rem;
@@ -385,9 +390,11 @@ html
 }
 
 .footer-container {
-    max-width: 75rem;
+    /* max-width: 75rem; */
     margin: auto;
     display: grid;
+    align-content: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 2rem;
 }

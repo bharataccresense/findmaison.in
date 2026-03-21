@@ -2,17 +2,32 @@ const slides = document.querySelectorAll(".slide");
 const bars = document.querySelectorAll(".progress");
 
 let current = 0;
-const duration = 4000;
 
 function showSlide(index) {
-  slides.forEach(s => s.classList.remove("active"));
-  bars.forEach(b => {
-    b.classList.remove("active");
-    b.querySelector("::before");
+
+  slides.forEach((video, i) => {
+    video.classList.remove("active");
+    video.pause();
+    video.currentTime = 0;
+
+    bars[i].classList.remove("active");
   });
 
-  slides[index].classList.add("active");
+  const activeVideo = slides[index];
+
+  activeVideo.classList.add("active");
+  activeVideo.play();
+
   bars[index].classList.add("active");
+
+  // Sync progress bar duration with video
+  const duration = activeVideo.duration || 4;
+
+  bars[index].style.setProperty("--duration", duration + "s");
+
+  activeVideo.onended = () => {
+    nextSlide();
+  };
 }
 
 function nextSlide() {
@@ -21,5 +36,7 @@ function nextSlide() {
   showSlide(current);
 }
 
-showSlide(current);
-setInterval(nextSlide, duration);
+// Start first video after load
+window.onload = () => {
+  showSlide(current);
+};
