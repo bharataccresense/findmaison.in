@@ -354,11 +354,11 @@ html
 
 .footer-container {
     /* max-width: 75rem; */
-    margin: auto;
+    /* margin: auto; */
     display: grid;
-    align-content: center;
+    align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -478,8 +478,16 @@ html
 
   /* Footer */
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
+    justify-items: center;
+
+  }
+
+   .footer-container .footer-col:nth-child(1),
+  .footer-container .footer-col:nth-child(4) {
+    grid-column: span 2;
+   
   }
 }
 
