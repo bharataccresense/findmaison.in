@@ -42,19 +42,19 @@ window.onload = () => {
 };
 
 
-AOS.init({
-  duration: 1000,
-  once: false,
-  mirror: true,
-  offset:150
-});
+// AOS.init({
+//   duration: 1000,
+//   once: false,
+//   mirror: true,
+//   offset:150
+// });
 
-function showSection(id) {
-    let sections = document.querySelectorAll('.section');
+// function showSection(id) {
+//     let sections = document.querySelectorAll('.section');
 
-    sections.forEach(sec => {
-      sec.classList.remove('active');
-    });
+//     sections.forEach(sec => {
+//       sec.classList.remove('active');
+//     });
 
-    document.getElementById(id).classList.add('active');
-  }
+//     document.getElementById(id).classList.add('active');
+//   }

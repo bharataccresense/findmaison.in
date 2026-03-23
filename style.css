@@ -364,7 +364,8 @@ html
 
 .brand-img img {
     width: 100%;
-    max-width:10rem;
+    max-width:8rem;
+    border-radius:50%;
     /* border-radius: 0.625rem; */
 }
 
