@@ -439,11 +439,11 @@ html
   }
 
   .hero-div {
-    height: 20rem;
+    height:100%;
   }
 
   .slide {
-    height: 20rem;
+    height:100%;
   }
 
   .about-flex {
