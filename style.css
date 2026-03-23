@@ -510,6 +510,11 @@ html
     text-align: center;
   }
 
+  .brand-text h2{
+
+    font-size:1.5rem;
+  }
+
   /* Footer */
   .footer-container {
     grid-template-columns: 1fr 1fr;
