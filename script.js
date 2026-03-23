@@ -58,3 +58,46 @@ window.onload = () => {
 
 //     document.getElementById(id).classList.add('active');
 //   }
+
+
+
+function abs()
+{
+    window.location.href="#about"
+}
+
+var op= document.getElementById('open');
+var cl= document.getElementById('cls');
+var show= document.getElementById('disp');
+
+
+function up()
+{
+    
+  show.style.display="flex";
+  cl.style.display="block";
+  op.style.display="none";
+  
+
+}
+
+function down()
+{
+
+  show.style.display="none";
+  cl.style.display="none";
+  op.style.display="block";
+  
+  
+}
+
+// const men = document.getElementById("disp");
+const links = show.querySelectorAll("a");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    show.style.display = "none";
+    cl.style.display="none";
+    op.style.display="block";
+  });
+});
