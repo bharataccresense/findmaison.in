@@ -417,6 +417,17 @@ html
     transition: 0.3s;
 }
 
+.footer-col a
+{
+    color:#ccc ;
+    text-decoration:none;
+}
+.footer-col a:hover
+{
+    
+    text-decoration:underline;
+}
+
 .footer-col ul li a:hover {
     color: #fff;
 }
