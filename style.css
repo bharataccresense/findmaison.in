@@ -21,6 +21,17 @@ html
 
 }
 
+/* .section {
+  display: none;
+  height: 100%;  
+  border:.1rem solid black;      
+  width: 100%; 
+}
+
+.section.active {
+  display: block;
+} */
+
 .logo {
     /* border:.1rem solid black; */
     width: auto;
@@ -58,6 +69,12 @@ html
     text-decoration: none;
     font-size: 1.2rem;
     color: #333;
+    
+}
+
+.nav a:hover{
+    
+    border-bottom:.1rem solid #333;
 
 }
 
@@ -135,11 +152,16 @@ html
 
 .about {
     padding: 3.75rem 1.25rem;
+    margin-top:2rem;
+    
+    /* border:.1rem solid black; */
+    
 }
 
 .about-flex {
     display: flex;
     align-items: center;
+    /* justify-self: center; */
     gap: 2.5rem;
     max-width: 68.75rem;
     margin: 0 auto;
@@ -148,7 +170,7 @@ html
 
 .about-img img {
     width: 100%;
-    max-width: 31.25rem;
+    max-width:25rem;
     /* border-radius: 0.625rem; */
 }
 
